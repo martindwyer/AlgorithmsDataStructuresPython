@@ -1,3 +1,5 @@
+from .binaryGate import BinaryGate
+
 class AndGate(BinaryGate):
 
 	def __init__(self,n):
@@ -9,5 +11,5 @@ class AndGate(BinaryGate):
 		b = self.getPinB()
 		if a==1 and b ==1:
 			return 1
-		else
+		else:
 			return 0

@@ -9,10 +9,10 @@ class Fraction:
         else:
             raise ValueError("Top isn't an int")
             
-        if isinstance(bottom, int):
+        if isinstance(bottom, int) and bottom != 0:
             self.den = bottom
         else:
-            raise ValueError("bottom isn't an int")
+            raise ValueError("Bottom either is 0 or not an int")
 
         common = gcd(self.num,self.den)
         self.num = self.num//common

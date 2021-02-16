@@ -6,6 +6,6 @@ def squareroot(n):
 
     return root
 
-print squareroot(9)
+print(squareroot(9))
 
-print squareroot(4563)
+print(squareroot(4563))

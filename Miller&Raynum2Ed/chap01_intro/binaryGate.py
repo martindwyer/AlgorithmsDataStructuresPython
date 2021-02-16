@@ -1,3 +1,4 @@
+from .logicGate import LogicGate
 
 class BinaryGate(LogicGate):
 
@@ -7,11 +8,14 @@ class BinaryGate(LogicGate):
         self.pinA = None
         self.pinB = None
 
-    def getPinA(self):
-    	if self.pinA == None:
-	        return int(input("Enter Pin A input for gete " + self.getLabel()+"-->"))
-	    else:
-	    	return self.pinA.getFrom().getOutput()
+    # Commented out for future examination (method getFrom() seems to have no home here.
+	# def getPinA(self):
+    # 	if self.pinA == None:
+	#         return int(input("Enter Pin A input for gete " + self.getLabel()+"-->"))
+	# 	else:
+	# 		answer = self.pinA.getFrom()
+	#
+	# 		return self.pinA.getFrom().getOutput()
 
     def getPinB(self):
         return int(input("Enter Pin B input for gate " + self.getLabel()+"-->"))
@@ -23,4 +27,4 @@ class BinaryGate(LogicGate):
     		if self.pinB == None:
     			self.pinB = source
     		else:
-    			rails RuntimeError("Error: NO EMPTY PINS")
+    			raise RuntimeError("Error: NO EMPTY PINS")
